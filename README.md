@@ -23,3 +23,59 @@ The course : [Computer Science: Programming with a Purpose](https://introcs.cs.p
     - double Math.E
     - double Math.PI
 
+### Lecture 2: CONDITIONALS AND LOOPS
+Conditionals and loops enable us to do more complex control flows.
+1. The if statement
+    ```Java
+    // Absolute value
+    if (x<0) { 
+        x = -x; 
+    }
+    ```
+
+    ```Java
+    // Maximum
+    if (x>y) {
+        max = x; 
+    } 
+    else {
+        max = y;
+    }
+    ```
+
+    ```Java
+    // Use if statement to build a simple two-number sort
+    public class twoSort{
+        public static void main(String[] args)
+        {
+            int a = Integer.parseInt(args[0]);
+            int b = Integer.parseInt(args[1]);
+
+            if (a>b){
+                int t = a;
+                a = b;
+                b = t;
+            }
+            System.out.println(a,b);
+        }
+    }
+    ```
+2. The while statement
+    ```Java
+    public class powerOfTwo{
+        public static main(String[] args)
+        {
+            int n = Integer.parseInt(args[0]);
+            int v = 1;
+            int i = 0;
+            while ( i<= n)
+            {
+                System.out.println(v);
+                i = i + 1;
+                v = 2 * v;
+            }
+        }
+    }
+    ```
+    - Newton-Raphson method to compute square root.
+    
