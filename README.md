@@ -78,4 +78,20 @@ Conditionals and loops enable us to do more complex control flows.
     }
     ```
     - Newton-Raphson method to compute square root.
+
+    3. The for loop
+
+    ```Java
+    int sum = 0;
+    for (int i = 1; i <= N; i++)
+        sum += i;
+    System.out.println(sum);
+    ```
+    - Every for loop has an equivalent of while loop.
+
+    4. Debugging
+    - Programming is primarily a process of finding and fixing mistakes.
+    - Four steps of programming : EDIT, COMPILE, RUN, TEST.
+    - Performance matters.
+
     
