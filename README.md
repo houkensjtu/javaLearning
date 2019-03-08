@@ -94,4 +94,42 @@ Conditionals and loops enable us to do more complex control flows.
     - Four steps of programming : EDIT, COMPILE, RUN, TEST.
     - Performance matters.
 
-    
+    ### Lecture 3: ARRAYS
+    The first data structure in this course.
+    1. What is data structure?  
+    A data structure is an arrangement of data that enables efficient processing by a program.
+
+   ```Java
+   double[] a;
+   a = new double[10000];
+   a[0] = 1;
+   a[1] = 2;
+   ```
+   2. Critical concepts
+   - index start at 0.
+   - Given i, the access to a[i] is extremely efficient.
+   - The assignment b = a makes the name b and a refer to the same arrar.
+
+   3. Java built-in support feature for arrays
+   ```Java
+   // Declare an array.
+   double[] a;
+
+   // Create an array of fixed size.
+   a = new double[10];
+
+   // Refer to the length of the array.
+   a.length;
+
+   // Compact intialization.
+   double[] a = new double[100];
+
+   // Initialize with values.
+   double[] x = {0.1, 0.6, 0.8};
+
+   // Copy an array.
+   double[] b = new double[100];
+   for(int i = 0; i<a.length; i++)
+       b[i] = a[i];
+   ```
+
