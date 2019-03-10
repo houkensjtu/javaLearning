@@ -132,4 +132,7 @@ Conditionals and loops enable us to do more complex control flows.
    for(int i = 0; i<a.length; i++)
        b[i] = a[i];
    ```
+   4. Examples of array processing
 
+   - Build a deck.
+   
