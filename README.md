@@ -135,4 +135,41 @@ Conditionals and loops enable us to do more complex control flows.
    4. Examples of array processing
 
    - Build a deck.
+   - Shuffle a deck.
+
+   5. Two-dimensional array
+   - Declare and initialize.
+   ```Java
+   double[][] a;
+   a = new double[100][100];
+   a[i][j] = b[i][k] * c[k][j];
+
+   // Refer to number of rows.
+   a.length;
+
+   // Refer to number of columns.
+   a[i].length;
+
+   // Refer to row i.
+   a[i];
+
+   // Initialize.
+   double[][] a = new double[100][100];
+   double[][] a = {{..., ..., ..., ...},
+                   {..., ..., ..., ...},
+                   ...
+                  };
+
+   ```
    
+   - Applications : Vector and matrice.
+   ```Java
+   double[] c = new double[N];
+   for(int i=0; i < N; i++)
+       c[i] = a[i] + b[i];
+
+   double[][] = new double[N][N];
+   for(int i = 0; i < N; i++)
+       for(int j = 0; j < N; j++)
+           c[i][j] = a[i][j] + b[i][j];
+   ```
