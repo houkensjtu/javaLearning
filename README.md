@@ -173,3 +173,18 @@ Conditionals and loops enable us to do more complex control flows.
        for(int j = 0; j < N; j++)
            c[i][j] = a[i][j] + b[i][j];
    ```
+
+    ### Lecture 4: Standard input and output
+
+    Capable of taking infinite data from a stream (or file) instead of taking small amount of data from cmd line arguments.
+
+    1. StdIn and StdOut library. 
+    - From this point on, use StdOut.println() instead of System.out.println();
+    - StdOut program can be piped to a StdIn program.
+
+    2. StdDraw library
+    - Draw simple shape use StdDraw.line(x1,y1,x2,y2)
+    - Draw functions
+    - Draw patterns based on some random behavior.
+
+    
