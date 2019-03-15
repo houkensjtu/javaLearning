@@ -187,4 +187,5 @@ Conditionals and loops enable us to do more complex control flows.
     - Draw functions
     - Draw patterns based on some random behavior.
 
-    
+    3. Animation
+    - Bouncing ball.
