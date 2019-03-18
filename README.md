@@ -174,7 +174,7 @@ Conditionals and loops enable us to do more complex control flows.
            c[i][j] = a[i][j] + b[i][j];
    ```
 
-    ### Lecture 4: Standard input and output
+### Lecture 4: Standard input and output
 
     Capable of taking infinite data from a stream (or file) instead of taking small amount of data from cmd line arguments.
 
@@ -189,3 +189,10 @@ Conditionals and loops enable us to do more complex control flows.
 
     3. Animation
     - Bouncing ball.
+
+### Lecture 5: Functions and libraries
+    1. Basic concepts
+    - Modular programming : Organize programs as independent modules.
+    - Reason : easier to share and reuse code to build bigger programs.
+    - For now : Modules and libraries just are .java files with multiple functions in it. (But can be more.)
+    - Funtions : Input, Output, and side effects. Examples seen so far : Math.random(), Math.abs(), Integer.parseInt(), StdIn.readInt()..
