@@ -196,3 +196,38 @@ Conditionals and loops enable us to do more complex control flows.
     - Reason : easier to share and reuse code to build bigger programs.
     - For now : Modules and libraries just are .java files with multiple functions in it. (But can be more.)
     - Funtions : Input, Output, and side effects. Examples seen so far : Math.random(), Math.abs(), Integer.parseInt(), StdIn.readInt()..
+
+    2. Case study : digital audio
+    - Crash course of sound.
+      A pure sound is a sin wave.  
+      440Hz is concert A sound.  
+      12 notes, logrithmic scale.  
+      Sound is nothing more than array of double values.  
+    - StdAudio library.
+      Convert to and from .wav file format.  
+
+    - HelloWorld for sound!
+```Java
+
+public class playThatTone{
+    public static double[] tone(double hz, double duration){
+        int N = (int) (44100 * duration);
+        double[] a = new double[N+1];
+        for (int i=0; i < N; i++){
+            a[i] = Math.sin(2 * Math.PI * i * hz / 44100);
+        }
+        return a;
+    }
+
+    public static void main(String[] args){
+        double hz = Double.parseDouble(args[0]);
+        double duration = Double.parseDouble(args[1]);
+
+        double[] a = tone(hz,duration);
+
+        StdAudio.play(a);
+    }
+}
+
+```
+    Bottom line : You can write program to manipulate sound.
