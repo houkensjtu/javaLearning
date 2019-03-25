@@ -231,3 +231,24 @@ public class playThatTone{
 
 ```
     Bottom line : You can write program to manipulate sound.
+
+    3. Case study 2 : Gaussian distribution (DIY library)
+    - Function can be defined with same name and different number of arguments.
+```Java
+// This is a diy Gaussian function library.
+public class Gaussian{
+    public static double pdf(double z){
+        ...;
+    }
+    public static double pdf(double z, double mu, double sigma){
+        ...;
+    }
+    public static void main(String[] args){
+        // Put some test code here...
+    }
+}
+```
+    - And it's good practice to include some test code in the main function of the library.
+    - To use a library : put the Gaussian.java file in the directory, and use Gaussian.xxx() to call the function.
+
+    
