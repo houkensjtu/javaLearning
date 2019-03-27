@@ -79,7 +79,7 @@ Conditionals and loops enable us to do more complex control flows.
     ```
     - Newton-Raphson method to compute square root.
 
-    3. The for loop
+3. The for loop
 
     ```Java
     int sum = 0;
@@ -89,15 +89,15 @@ Conditionals and loops enable us to do more complex control flows.
     ```
     - Every for loop has an equivalent of while loop.
 
-    4. Debugging
+4. Debugging
     - Programming is primarily a process of finding and fixing mistakes.
     - Four steps of programming : EDIT, COMPILE, RUN, TEST.
     - Performance matters.
 
-    ### Lecture 3: ARRAYS
-    The first data structure in this course.
-    1. What is data structure?  
-    A data structure is an arrangement of data that enables efficient processing by a program.
+### Lecture 3: ARRAYS
+The first data structure in this course.
+1. What is data structure?  
+A data structure is an arrangement of data that enables efficient processing by a program.
 
    ```Java
    double[] a;
@@ -105,12 +105,12 @@ Conditionals and loops enable us to do more complex control flows.
    a[0] = 1;
    a[1] = 2;
    ```
-   2. Critical concepts
+2. Critical concepts
    - index start at 0.
    - Given i, the access to a[i] is extremely efficient.
    - The assignment b = a makes the name b and a refer to the same arrar.
 
-   3. Java built-in support feature for arrays
+3. Java built-in support feature for arrays
    ```Java
    // Declare an array.
    double[] a;
@@ -132,13 +132,13 @@ Conditionals and loops enable us to do more complex control flows.
    for(int i = 0; i<a.length; i++)
        b[i] = a[i];
    ```
-   4. Examples of array processing
+4. Examples of array processing
 
    - Build a deck.
    - Shuffle a deck.
 
-   5. Two-dimensional array
-   - Declare and initialize.
+5. Two-dimensional array
+- Declare and initialize.
    ```Java
    double[][] a;
    a = new double[100][100];
@@ -162,7 +162,7 @@ Conditionals and loops enable us to do more complex control flows.
 
    ```
    
-   - Applications : Vector and matrice.
+- Applications : Vector and matrice.
    ```Java
    double[] c = new double[N];
    for(int i=0; i < N; i++)
@@ -176,28 +176,28 @@ Conditionals and loops enable us to do more complex control flows.
 
 ### Lecture 4: Standard input and output
 
-    Capable of taking infinite data from a stream (or file) instead of taking small amount of data from cmd line arguments.
+Capable of taking infinite data from a stream (or file) instead of taking small amount of data from cmd line arguments.
 
-    1. StdIn and StdOut library. 
+1. StdIn and StdOut library. 
     - From this point on, use StdOut.println() instead of System.out.println();
     - StdOut program can be piped to a StdIn program.
 
-    2. StdDraw library
+2. StdDraw library
     - Draw simple shape use StdDraw.line(x1,y1,x2,y2)
     - Draw functions
     - Draw patterns based on some random behavior.
 
-    3. Animation
+3. Animation
     - Bouncing ball.
 
 ### Lecture 5: Functions and libraries
-    1. Basic concepts
+1. Basic concepts
     - Modular programming : Organize programs as independent modules.
     - Reason : easier to share and reuse code to build bigger programs.
     - For now : Modules and libraries just are .java files with multiple functions in it. (But can be more.)
     - Funtions : Input, Output, and side effects. Examples seen so far : Math.random(), Math.abs(), Integer.parseInt(), StdIn.readInt()..
 
-    2. Case study : digital audio
+2. Case study : digital audio
     - Crash course of sound.
       A pure sound is a sin wave.  
       440Hz is concert A sound.  
@@ -230,9 +230,9 @@ public class playThatTone{
 }
 
 ```
-    Bottom line : You can write program to manipulate sound.
+Bottom line : You can write program to manipulate sound.
 
-    3. Case study 2 : Gaussian distribution (DIY library)
+3. Case study 2 : Gaussian distribution (DIY library)
     - Function can be defined with same name and different number of arguments.
 ```Java
 // This is a diy Gaussian function library.
@@ -250,5 +250,42 @@ public class Gaussian{
 ```
     - And it's good practice to include some test code in the main function of the library.
     - To use a library : put the Gaussian.java file in the directory, and use Gaussian.xxx() to call the function.
+
+### Lecture 6: Recursion
+
+1. Why learn recursion?
+- Represents a new mode of thinking
+- Provides a powerful program paradim
+- Gives insight into the nature of computation
+
+2. Example : convert an integer into binary
+- implement as a function of an integer N
+- *The structure of recursion:*
+  1. Base case : return sth. for a small N.
+  2. Reduction step : assume that the function for small N works, then figure out a way to compute for large N.
+  ```java
+  public class integerToBinary{
+      public static String convert (int N){
+          // Base case
+          if (N == 1) return "1";
+
+          // Reduction step
+          return convert(N/2) + (N % 2);
+      }
+
+      public static void main (String[] args){
+          int N = Integer.parseInt(args[0]);
+          System.out.println(convert(N));
+      }
+  }
+  ```
+  *Proof*
+  In the example, assume convert() works for N/2, if N is odd then append "1", or if N is even, append "0".
+
+ 3. Common bugs for a recursive function
+  - No base case.
+  - Induction does not converge to the base case, leads to infinite loop.
+
+
 
     
