@@ -282,10 +282,47 @@ public class Gaussian{
   *Proof*
   In the example, assume convert() works for N/2, if N is odd then append "1", or if N is even, append "0".
 
- 3. Common bugs for a recursive function
+  3. Common bugs for a recursive function
   - No base case.
   - Induction does not converge to the base case, leads to infinite loop.
 
+3. Some more classic examples
+  1. Ruler function
+  ```java
+  public class Ruler {
+      public static String ruler(int N)
+      {
+         if (N=0) return " ";
+         return ruler(N-1) + n + ruler(N-1);
+      }
+      public static void main(String[] args)
+      {
+          int N = Integer.parseInt(args[0]);
+          System.out.println(ruler(N));
+      }
+  }
+  ```
+  Observation : ruler(1) calls ruler(0) twice, ruler calls ruler(1) twice, so 2x2 it calls 4 ruller, and so on.
+
+
+
+  2. Hanoi tower puzzle
+  ```java
+  public class Hanoi{
+      public static String move(int N)
+      {
+          if (N==1) return N + "R";
+          return move(N-1) + N + "L" + move(N-1);
+      }
+      public static void main(String[] args)
+      {
+          int N = Integer.parseInt(args[0]);
+          System.out.println(move(N));
+      }
+  }
+  ```
+  Observation : Why call move(n-1) twice? Because to move the whole tower, you have to move the n-1 tower once to the right, move the nth disk left, and move the n-1 tower again to the right, that will complete the movement.
+  In the end, the program is very similar with Ruler().
 
 
     
