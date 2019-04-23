@@ -325,4 +325,36 @@ public class Gaussian{
   In the end, the program is very similar with Ruler().
 
 
-    
+### Lecture 7: Performance
+
+1. The challenge
+
+Will I be able to use my program to solve a large practical problem?
+If *not*, how might I *understand its performance characteristics so as to improve it?*
+
+- To predict program behavior: Will my program finish? When will my program finish?
+- To compare algorithms and implementations: How can I make my program faster?
+- An algorithm design success story: N-body simulation in 1970s, problem steps reduced *from N^2 to NlogN.*
+- Another algorithm design success story: fast Fourier transform in 1950s; breakdown a wave of N samples into periodic components. Again, the algorithm reduced the problem size *from N^2 to NlogN.*
+
+- An algorithm challenge: three sum proble: Given N numbers, count the triples that sum to 0.
+
+```Java
+public class threesum{
+   public static int count(int[] a){
+      int N = a.length;
+      int cnt = 0;
+      // Keep i<j<k to avoid repeating.
+      for (int i=0; i<N; i++)
+         for (int j=i; j<N; j++)
+            for (int k=j; k<N; k++)
+               if(a[i]+a[j]+a[k]==0)
+                  cnt++;
+      return cnt;
+   }
+   public static void main(String[] args){
+      int[] a = StdIn.readAllInts();
+      StdOut.println(count(a));
+   }
+}
+```
