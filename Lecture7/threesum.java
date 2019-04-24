@@ -11,6 +11,10 @@ public class threesum{
    }
    public static void main(String[] args){
       int[] a = StdIn.readAllInts();
-      StdOut.println(count(a));
+      
+      double start = System.currentTimeMillis() / 1000.0;
+      int cnt = count(a);
+      double now   = System.currentTimeMillis() / 1000.0;
+      StdOut.printf("%d (%.0f seconds)\n", cnt, now-start);
    }
 }

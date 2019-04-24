@@ -358,3 +358,27 @@ public class threesum{
    }
 }
 ```
+
+2. Empirical analysis
+
+- a first step in analyzing run time: Collecting sample data (actual or artificial)
+
+```Java
+public class Generator{
+    public static void main(String[] args){
+        int M = Integer.parseInt(args[0]);
+        int N = Integer.parseInt(args[1]);
+
+        for (int i=0; i<N; i++)
+           StdOut.println(StdRandom.uniform(-M,M));
+    }
+}
+```
+- Measuring run time:
+```Java
+double start = System.currentTimeMillis() / 1000.0;
+int cnt = count(a);
+double now   = System.currentTimeMillis() / 1000.0;
+StdOut.printf("%d (%.0f seconds\n", cnt, now-start);
+```
+
