@@ -414,4 +414,22 @@ public static int count(int[] a){
   - *Tilde notation* : Use only *the fastest growing term* (when N grow to +Inf.).
   - Example : *3/4N^2 + 4N + 12 ~ 3/4N^2*
 
+4. Doubling method
 
+- Is the run time of my program ~aN^b? Yes. Might also have a (lgN)^c factor.
+- As N increases, T(N)/T(N/2) tends to 2^b.
+- Doubling method:
+  - Start with a moderate size.
+  - Double the size.
+  - Repeat.
+
+- Order of the growth: If f(N)~a*g(N), we say g(N) is the order of the growth of the function.
+- g(N) is a property of algorithm, not the computer.
+  - g(N)~N : Linear
+  - g(N)~N^2 : Quadratic
+  - g(N)~N^3 : Cubic
+  - g(N)~lgN : Logarithmic
+  - g(N)~NlgN : Linearithmic
+  - g(N)~2^N : Exponential
+
+  
