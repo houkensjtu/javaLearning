@@ -382,3 +382,36 @@ double now   = System.currentTimeMillis() / 1000.0;
 StdOut.printf("%d (%.0f seconds\n", cnt, now-start);
 ```
 
+3. Mathematicl model
+- Can we write down an accurate formula for the run time of our program?
+- D.E.Knuth: Yes!
+- Need to find *the cost* of each operation; *the frequency* of execution of each operation.
+- A warm-up example: 1-sum
+```Java
+public static int count(int[] a){
+    int N = a.length;
+    int cnt = 0;
+    for (int i = 0; i<N; i++){
+        if (count[i]==0)
+            cnt++
+    }
+    return cnt;
+}
+```
+- Breakdown of the running time of each operation:
+  - Call of function : 20ns
+  - Var delcaration : 2ns
+  - Assignment : 2ns
+  - ...
+  - Increment : 1/2ns
+  - Comparison : 1/2ns
+  - Array access : 1/2ns
+
+- Count the number of each operation. Only increment, array access and comparison are operated multiple times, actually *N times.*
+- Result : Run time = c*N + 26.5, where c is between 2 and 2.5.
+
+- Simplify the notation : 
+  - *Tilde notation* : Use only *the fastest growing term* (when N grow to +Inf.).
+  - Example : *3/4N^2 + 4N + 12 ~ 3/4N^2*
+
+
