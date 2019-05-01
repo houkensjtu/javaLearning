@@ -433,3 +433,80 @@ public static int count(int[] a){
   - g(N)~2^N : Exponential
 
   
+### Lecture 8: Abstract data type
+1. What is data type?
+
+- Data type is a set of values and a set of operations on those data.
+- We want to write programs to process data of type other than the primitive data type (int, float, bool, etc..)
+- Examples: Color data type (3 8bit integers), Picture (2D array of Color), String...
+- Clients can use ADT(Abstract data type) without knowing the implementation of it.
+
+- We have alreday use ADT! (Strings). Java's String ADT allows you to write program to manipulate String, without knowing the implementation.
+
+2. Use a ADT
+You need to know...
+- Its name.
+- How to construct a new object.
+- How to apply operations on the object.
+
+```Java
+String s;
+s = new String("Hello!");
+Stdout.Println(s.substring(0,5));
+```
+
+- Quiz : What is ADT? Answer: it's a data type whose implemention is hidden from the client.
+
+3. Using the Color ADT
+
+```Java
+public class Color{
+    ...;
+}
+
+// Constructor 
+Color(int r, int g, int b);
+int getRed();
+int getBlue();
+int getGreen();
+...
+```
+- Example : Alber's color square.
+
+```Java
+public class AlberSquare{
+    public static void main(String[] args){
+        int r1 = Integer.parseInt(args[0]);
+        int g1 = Integer.parseInt(args[1]);
+        int b1 = Integer.parseInt(args[2]);
+        Color c1 = new Color(r1,g1,b1);
+
+        int r2 = Integer.parseInt(args[3]);
+        int g2 = Integer.parseInt(args[4]);
+        int b2 = Integer.parseInt(args[5]);
+        Color c2 = new Color(r2,g2,b2);
+
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(.25,.5,.2);
+
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(.75,.5,.2);
+
+        StdDraw.setPenColor(c2);
+        StdDraw.filledSquare(.25,.5,.1);
+
+        StdDraw.setPenColor(c1);
+        StdDraw.filledSquare(.75,.5,.1);
+    }
+}
+```
+
+- Sample output:
+
+![AlberSquare](./Lecture8/albersquare.jpg)
+
+
+
+
+
+
