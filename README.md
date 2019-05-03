@@ -505,6 +505,11 @@ public class AlberSquare{
 
 ![AlberSquare](./Lecture8/albersquare.jpg)
 
+4. Image processing
+
+Convert an image to grey scale; scale up or down an image.
+(Image is an array of Color.)
+
 
 
 
