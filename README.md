@@ -511,7 +511,55 @@ Convert an image to grey scale; scale up or down an image.
 (Image is an array of Color.)
 
 
+### Lecture 9: Creating data types
 
+1. Basic building blocks of programming
+- primitive data types
+- Math
+- conditional and loop
+- array
+- Standard IO
+- functions and modules
+- objects
 
+2. Object-oriented programming )OOP)
+- create your own data type
+- use them in your program
 
+3. How to create your own ADT
+- Define the set of values (instance variables)
+- Implement operations on values (methods)
+- Create and intialize new objects (constructors)
 
+In Java, a data-type implementation is known as a Class.
+```Java
+public class Charge{
+
+    private final double rx, ry;
+    private final double q;
+    
+    // Constructor
+    public Charge(double x0, double y0, double q0){
+        rx = x0;
+        ry = y0;
+        q = q0;
+    }
+    
+    // Methods
+    public double potentialAt(double x, double y){
+        double k = 8.99e09;
+        double dx = x - rx;
+        double dy = y - ry;
+        return k * q / Math.sqrt(dx*dx + dy*dy)
+    }
+    public String toString()
+    {   return q + " at " + "(" + rx + ", " + ry +")"; }
+
+    // Main
+    public static void main(String[] args){
+        Charge c = new Charge(.72, .31, 21.3);
+        StdOut.println(c);
+        StdOut.printf("%6.2e\n", c.potentialAt(.42, .71));
+    }
+}
+```
