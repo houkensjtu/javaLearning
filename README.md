@@ -555,11 +555,34 @@ public class Charge{
     public String toString()
     {   return q + " at " + "(" + rx + ", " + ry +")"; }
 
-    // Main
+    // Main (as a test client)
     public static void main(String[] args){
         Charge c = new Charge(.72, .31, 21.3);
         StdOut.println(c);
         StdOut.printf("%6.2e\n", c.potentialAt(.42, .71));
     }
+}
+```
+
+4. The point charge data type
+
+- Dataset : position rx, ry and charge q.
+- toString method get called by print(Object).
+- potentialAt(x,y) calculate the potential caused by the charge at (x,y).
+
+Modifiers:
+- private : denies client access and therefore makes data type abstract.
+- final : disalow any change on the data after the object is created.
+
+Constructor:
+```Java
+public class Charge{
+    ...
+    public Charge(double x0, double y0, double q0){
+        rx = x0;
+        ry = y0;
+        q  = q0;
+    }
+    ...
 }
 ```
