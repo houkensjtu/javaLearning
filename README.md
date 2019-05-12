@@ -568,7 +568,7 @@ public class Charge{
 
 - Dataset : position rx, ry and charge q.
 - toString method get called by print(Object).
-- potentialAt(x,y) calculate the potential caused by the charge at (x,y).
+- potentialAt(x,y) calculate the potential due the charge at (x,y).
 
 Modifiers:
 - private : denies client access and therefore makes data type abstract.
@@ -586,3 +586,16 @@ public class Charge{
     ...
 }
 ```
+5. Turtle graphics
+
+6. Complex numbers
+
+7. Summary
+- Create your own data types
+- Use them in your own programm
+- help us to simulate the physical world
+- Example: charged particle, color, sound, genome...
+
+- Java does not have a data type for every possible application.
+- Data types enable us to add our own abstractions.
+- Examples: Complex numbers, vectors, matrix, picture...
