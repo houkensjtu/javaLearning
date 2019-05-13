@@ -599,3 +599,30 @@ public class Charge{
 - Java does not have a data type for every possible application.
 - Data types enable us to add our own abstractions.
 - Examples: Complex numbers, vectors, matrix, picture...
+
+### Lecture 10: Programming languages
+
+1. The tower of babel
+- Ways to solve a programming problem. Different languages are appropriate for different problems.
+- Java 
+  - You can now write a threesum program.
+- C/C++
+  - You can also write it in C language.
+  - Big difference : there is no object in C.
+  - In C/C++, you are responsible for memory allocation. Might lead to memory leak.
+- Python
+  - Python can be used like a calculator.
+  - Instead of braces, use indent to sperate blocks.
+  - No type declarations.
+  - Array creation idiom (range(N)).
+  - for idiom (for i in range(N):).
+  - Compilation vs. Interpretation.
+  - No compilation time type check.
+- Matlab
+  - Use Matlab like Java or C.
+  - More typicl usage is for matrix processing.
+  - Big difference : Matlab is not free.
+  - Matlab is written in Java.
+  - The Java compiler are written in C.
+  - Good matrix libraries are available for C/C++/Java/Python.
+  
