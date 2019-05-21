@@ -625,4 +625,68 @@ public class Charge{
   - Matlab is written in Java.
   - The Java compiler are written in C.
   - Good matrix libraries are available for C/C++/Java/Python.
-  
+
+2. Java in context
+
+- Why use Java in this course?
+  - Widely used; free; full set of modern abstraction; modern libraries; automatic type checking...
+- Then why learn other languages?
+  - Offer something new about computation.
+  - Need to interface with other co-workers.
+  - Better than Java for the specific application.
+  - Provides intellectual challenge.
+  - New style of programming.
+
+3. Programming style
+- Procedural : C
+- Scripted : Python, Ruby
+- Special purpose : Matlab, Postscript
+- Object-oriented : focus on objects that do things
+- Functional : Haskell, OCaml...
+
+4. Object-oriented programming
+- Software is a simulation of the real world.
+- Why OOP?
+  - Is my program easy to write?
+  - Is it easy to find errors and maintain?
+  - Is it correct and efficient?
+  - Features of OOP:
+    - Encapsulation to hide information -> Robust
+    - Type checking -> Avoid erros
+    - Libraries -> Reuse of code
+    - Immutability -> Stability of data
+
+5. Type checking
+- Static (compile time) type checking (e.g. Java)
+  - All variables have declared types.
+  - System checks for type errors at compile time.
+- Dynamic (run time) type checking (e.g. Python)
+  - Values, not variables have defined types.
+  - System checks for type errors at runtime.
+-  Which is better? -> Religious war!
+
+6. Functional programming
+- Why can't we use functions as arguments in Java?
+  - Actually we can in Java 8.
+- Completely avoid side effect in program.
+- Functions are first-class entities. (Can be arguments and return values of other functions)
+- Often leads to compact code.
+- An example in Python:
+
+```Python
+def square(x):
+  return x*x
+
+def table(f,sequence):
+  for x in sequence:
+     print(x)
+     print(f(x))
+
+table(square,range(10))
+```
+- Why learn functional programming?
+  - Offers something new.
+  - Introduce a new programming style.
+  - Intellectual challenge.
+
+Continue to PartII...
