@@ -22,7 +22,34 @@ The course : [Computer Science: Programming with a Purpose](https://introcs.cs.p
     - long Math.round(double a)
     - double Math.E
     - double Math.PI
+4. Key language syntax :baby_chick::
+```Java
+public class Helloworld
+{
+   public static void main(String[] args)
+   {
+      // 几种常见变量类型的声明和赋值
+      int a = 1;
+      double pi = 3.14;
+      char b = 'b';
+      
+      // Java里的与和或运算是 && 和 ||, Python里是and和or
+      bool x = true;
+      String r = "hello";
+      
+      // 简单的输出
+      System.out.println("Hello world!\n");
+      
+      // 简单的输入
+      int c = Integer.parseInt(args[0]);
+      int d = Integer.parseInt(args[1]);
+      System.out.println(c);
+      System.out.println(d);
+   }
+}
 
+
+```
 ### Lecture 2: CONDITIONALS AND LOOPS
 Conditionals and loops enable us to do more complex control flows.
 1. The if statement
